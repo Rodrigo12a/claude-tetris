@@ -6,13 +6,21 @@
   <title>Tetris</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark">
   <div class="wrapper">
     <h1 class="game-title">TETRIS</h1>
     <div class="game-container">
       <canvas id="board" width="300" height="600"></canvas>
 
       <aside class="panel">
+        <div class="panel-section theme-section">
+          <span class="label">MODO CLARO</span>
+          <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle" aria-label="Alternar modo claro/oscuro" />
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+
         <div class="panel-section">
           <span class="label">SCORE</span>
           <span class="value" id="score">0</span>
