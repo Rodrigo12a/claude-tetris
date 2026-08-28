@@ -1,0 +1,15 @@
+[
+  { "name": "area:gameplay",        "color": "1d76db", "description": "Lógica de piezas, colisión, rotación, spawn" },
+  { "name": "area:render",          "color": "5319e7", "description": "Dibujo en canvas, colores, ghost piece, next" },
+  { "name": "area:ui",              "color": "006b75", "description": "HTML/CSS, overlays, marcador, botones" },
+  { "name": "area:controles",       "color": "0e8a16", "description": "Teclado, pausa, soft drop y hard drop" },
+  { "name": "area:puntuacion",      "color": "fbca04", "description": "Score, líneas, niveles, velocidad de caída" },
+  { "name": "tipo:bug",             "color": "d73a4a", "description": "Algo no funciona como debería" },
+  { "name": "tipo:mejora",          "color": "a2eeef", "description": "Nueva funcionalidad o mejora" },
+  { "name": "tipo:docs",            "color": "0075ca", "description": "README o comentarios del código" },
+  { "name": "tipo:pregunta",        "color": "d876e3", "description": "Duda, no requiere cambio de código" },
+  { "name": "prio:P1",              "color": "b60205", "description": "Rompe el juego o bloquea jugar" },
+  { "name": "prio:P2",              "color": "d93f0b", "description": "Importante, no bloqueante" },
+  { "name": "prio:P3",              "color": "fef2c0", "description": "Mejora menor o cosmética" },
+  { "name": "estado:necesita-info", "color": "e4e669", "description": "Falta información para diagnosticar" }
+]
