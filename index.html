@@ -10,7 +10,10 @@
   <div class="wrapper">
     <h1 class="game-title">TETRIS</h1>
     <div class="game-container">
-      <canvas id="board" width="300" height="600"></canvas>
+      <div class="board-area">
+        <canvas id="board" width="300" height="600"></canvas>
+        <div id="powerup-notice" class="powerup-notice"></div>
+      </div>
 
       <aside class="panel">
         <div class="panel-section theme-section">
@@ -37,6 +40,7 @@
         <div class="panel-section">
           <span class="label">NEXT</span>
           <canvas id="next-canvas" width="120" height="120"></canvas>
+          <span class="label powerup-name" id="powerup-name"></span>
         </div>
 
         <div class="panel-section controls">
@@ -47,6 +51,7 @@
             <li><kbd>↓</kbd> bajar</li>
             <li><kbd>Space</kbd> caída</li>
             <li><kbd>P</kbd> pausa</li>
+            <li class="hint">las piezas brillantes son power-ups</li>
           </ul>
         </div>
       </aside>

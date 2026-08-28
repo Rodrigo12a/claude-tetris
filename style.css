@@ -21,6 +21,9 @@ body.dark {
   --restart-hover: #9bbdff;
   --switch-bg: #2a2a3a;
   --switch-knob: #e0e0e0;
+  --notice-bg: rgba(26, 26, 37, 0.94);
+  --notice-border: #7aa2f7;
+  --notice-text: #f0f0f5;
 }
 
 body.light {
@@ -40,6 +43,9 @@ body.light {
   --restart-hover: #5a8ce0;
   --switch-bg: #cfd3e0;
   --switch-knob: #ffffff;
+  --notice-bg: rgba(255, 255, 255, 0.96);
+  --notice-border: #3b6fd6;
+  --notice-text: #24242e;
 }
 
 body {
@@ -79,6 +85,47 @@ body {
   background: var(--board-bg);
   border-radius: 4px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Aviso de power-up ---- */
+.board-area {
+  position: relative;
+}
+
+.powerup-notice {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  white-space: nowrap;
+  padding: 8px 16px;
+  border: 1px solid var(--notice-border);
+  border-radius: 20px;
+  background: var(--notice-bg);
+  color: var(--notice-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.powerup-notice.show {
+  display: block;
+  animation: powerup-notice 1.8s ease forwards;
+}
+
+@keyframes powerup-notice {
+  0%   { opacity: 0; transform: translate(-50%, -10px) scale(0.94); }
+  12%  { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  80%  { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -6px) scale(1); }
+}
+
+.powerup-name {
+  min-height: 12px;
+  color: var(--accent);
 }
 
 /* ---- Panel lateral ---- */
@@ -187,6 +234,12 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.controls .hint {
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 kbd {
